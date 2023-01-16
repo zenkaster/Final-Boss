@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1440px;
+  margin: auto;
+  background-color: #272727;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.a1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #93ff82;
+  border-radius: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  text-align: center;
+  color: #000000;
+  padding: 120.5px 662px;
+  width: 1440px;
+  height: 323px;
+}
+
+.header {
+  margin: 32px 0 16px;
+  background: black;
+  border-radius: 10px;
+  width: 97.7777777778%;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 24px;
+}
+.header .search {
+  margin: 0 37px 0 271px;
+  background-color: #302c2c;
+  background-image: url(../img/Vectorlupa.png);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  width: 41.1931818182%;
+  padding: 15px 56px 14px 16px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  font-feature-settings: "liga" off;
+  color: #777777;
+  border-radius: 10px;
+}
+.header .search:focus {
+  outline: none;
+}
+.header .drops {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 64px;
+}
+.header .drops .drop-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.header .drops .drop-down p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+}

@@ -8,3 +8,69 @@
     padding:0;
 }
 
+.wrapper{
+    width: 1440px;
+    margin: auto;
+    background-color: var.$background-dark;
+    @include mixin.flex(unset,center);
+    flex-direction: column;
+}
+
+.a1{
+    @include mixin.flex(center,center);
+    background: var.$green;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    text-align: center;
+    color: #000000;
+    padding: 120.5px 662px;
+    width: 1440px;
+    height: 323px;
+}
+
+.header{
+    margin: 32px 0 16px;
+    background: var.$black;
+    border-radius: 10px;
+    @include mixin.width(1440,1408);
+    @include mixin.flex(unset,center);
+    padding: 12px 24px;
+    .search{
+        margin: 0 37px 0 271px;
+        background-color: var.$dark-grey;
+        background-image: url(../img/Vectorlupa.png);
+        background-repeat: no-repeat;
+        background-position: 95% center;
+        @include mixin.width(1408,580);
+        padding: 15px 56px 14px 16px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;            
+        font-feature-settings: 'liga' off;
+        color: var.$body;
+        border-radius: 10px;
+        &:focus{
+            outline: none;
+        }
+    }
+    .drops{
+        @include mixin.flex(center,center);
+        gap:64px;
+        .drop-down{
+            @include mixin.flex(center,center);
+            gap: 12px;
+            p{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                color: var.$white;
+            }
+        }
+    }
+}
+
