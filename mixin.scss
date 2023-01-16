@@ -10,3 +10,118 @@
     align-items: $ai;
     flex-wrap: wrap;
 }
+
+
+@mixin dxxxlarge(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+}
+@mixin dxxlarge(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    font-feature-settings: 'liga' off;
+}
+@mixin dxlarge(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    font-feature-settings: 'liga' off;
+}
+@mixin dlarge(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    font-feature-settings: 'liga' off;
+}
+@mixin dmedium(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    font-feature-settings: 'liga' off;    
+}
+@mixin dsmall(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    font-feature-settings: 'liga' off;
+}
+@mixin dxsmall(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;    
+}
+@mixin dxxsmall(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    font-feature-settings: 'liga' off;
+}
+@mixin slarge(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+}
+@mixin smedium(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+}
+@mixin ssmall(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+}
+@mixin bxlarge(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+}
+@mixin blarge(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    font-feature-settings: 'liga' off;
+}
+@mixin bmedium(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    font-feature-settings: 'liga' off;
+}
+@mixin bsmall(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    font-feature-settings: 'liga' off;
+}
+@mixin bxsmall(){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    font-feature-settings: 'liga' off;
+}
+@mixin mediumit(){
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    font-feature-settings: 'liga' off;
+}
