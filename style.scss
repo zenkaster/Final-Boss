@@ -1,0 +1,10 @@
+@use 'mixin.scss';
+@use 'var.scss';
+@use 'media.scss';
+*{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: 0;
+    padding:0;
+}
+
