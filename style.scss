@@ -146,6 +146,7 @@
         }
 
         .switcher{
+            margin-left: 65px;
             padding: 3px;
             display: flex;
             width: 84px;
@@ -247,14 +248,12 @@
             }
             h4{
                 width: 704px;
-                height: 84px;
                 font-family: 'Inter';
                 font-style: normal;
                 font-weight: 800;
                 font-size: 36px;
                 font-feature-settings: 'liga' off;
                 color: var.$white;
-                overflow: hidden;
             }
         }
         &-third{
@@ -274,7 +273,6 @@
             .line{
                 width: 284px;
                 border: 1px solid var.$light-grey;
-                
             }
             p{
                 height: 66px;
@@ -295,6 +293,72 @@
                     text-transform: lowercase;
                     font-feature-settings: 'liga' off;
                     color: var.$body;
+                }
+            }
+        }
+    }
+    .vertical-blocks{
+        @include mixin.flex(unset,unset);
+        gap: 14px;
+        width: 100%;
+        .block{
+            .img{
+                height: 360px;
+                width: 460px;
+                border-radius: 10px;                
+                background: var.$red;
+                border-radius: 10px;
+            }
+            .text{
+                @include mixin.flex(unset,unset);
+                flex-direction: column;
+                background-color: var.$black;
+                padding: 16px;
+                border-radius: 10px;
+                h1{
+                    width: 376px;
+                    height: 164px;                
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 36px;
+                    font-feature-settings: 'liga' off;
+                    color: var.$white;
+                }
+                p{
+                    width: 376px;
+                    height: 88px;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    letter-spacing: -0.019em;
+                    color: var.$white;
+                    margin: 43px 0 16px;
+                }
+                .date{
+                    @include mixin.flex(unset,center);
+                    h5{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$light-grey;
+                    }
+                    img{
+                        margin: 0 5px 0 13px;
+                        width: 12px;
+                        height: 12px;
+                    }
+                    h6{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$white;
+                    }
                 }
             }
         }

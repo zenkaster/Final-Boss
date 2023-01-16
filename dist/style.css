@@ -159,6 +159,7 @@
   color: black;
 }
 .main .steppe-tags .switcher {
+  margin-left: 65px;
   padding: 3px;
   display: flex;
   width: 84px;
@@ -273,14 +274,12 @@
 }
 .main .news-block-second h4 {
   width: 704px;
-  height: 84px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 800;
   font-size: 36px;
   font-feature-settings: "liga" off;
   color: white;
-  overflow: hidden;
 }
 .main .news-block-third {
   display: flex;
@@ -324,4 +323,77 @@
   text-transform: lowercase;
   font-feature-settings: "liga" off;
   color: #777777;
+}
+.main .vertical-blocks {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  gap: 14px;
+  width: 100%;
+}
+.main .vertical-blocks .block .img {
+  height: 360px;
+  width: 460px;
+  border-radius: 10px;
+  background: #ea2e34;
+  border-radius: 10px;
+}
+.main .vertical-blocks .block .text {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: black;
+  padding: 16px;
+  border-radius: 10px;
+}
+.main .vertical-blocks .block .text h1 {
+  width: 376px;
+  height: 164px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  font-feature-settings: "liga" off;
+  color: white;
+}
+.main .vertical-blocks .block .text p {
+  width: 376px;
+  height: 88px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.019em;
+  color: white;
+  margin: 43px 0 16px;
+}
+.main .vertical-blocks .block .text .date {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .vertical-blocks .block .text .date h5 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  font-feature-settings: "liga" off;
+  color: #e3e3e3;
+}
+.main .vertical-blocks .block .text .date img {
+  margin: 0 5px 0 13px;
+  width: 12px;
+  height: 12px;
+}
+.main .vertical-blocks .block .text .date h6 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  font-feature-settings: "liga" off;
+  color: white;
 }
