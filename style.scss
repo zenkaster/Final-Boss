@@ -51,6 +51,17 @@
             }
         }
     }
+    &:checked ~* .horizontal-blocks{
+        .text{
+            background-color: var.$white;
+            h1,h2{
+                color: var.$black;
+            }
+            h5{
+                color: var.$dark-grey;
+            }
+        }
+    }
 }
 
 
@@ -360,6 +371,90 @@
                         color: var.$white;
                     }
                 }
+            }
+        }
+    }
+    .horiz-blocks-and-banner{
+        @include mixin.flex(unset,unset);
+        gap: 16px;
+        width: 100%;
+        margin: 24px 0;
+    }
+    .a4{
+        width: 460px;
+        height: 920px;
+        background: var.$green;
+        border-radius: 10px;
+    }
+    .horizontal-blocks{
+        @include mixin.width(1440,932);
+        @include mixin.flex(unset,unset);
+        flex-direction: column;
+        gap: 24px;
+        .block{
+            &:nth-child(even){
+                flex-direction: row-reverse;
+            }
+            @include mixin.flex(unset,unset);
+            flex-wrap: nowrap;
+            gap: 0;            
+            .text{
+                @include mixin.width(932,460);            
+                padding: 16px;
+                max-width: 460px;
+                border-radius: 10px;
+                background-color: var.$black;
+                h1{
+                    height: 164px;
+                    width: 392px;                    
+                    @include mixin.dlarge();
+                    color: var.$white;
+                }
+                h2{
+                    height: 88px;
+                    width: 392px;                    
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    letter-spacing: -0.019em;
+                    color: var.$white;
+                    margin: 43px 0 16px;
+                }
+                .date{
+                    @include mixin.flex(unset,center);
+                    h5{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$light-grey;
+                    }
+                    img{
+                        margin: 0 5px 0 13px;
+                        width: 12px;
+                        height: 12px;
+                    }
+                    h6{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$white;
+                    }
+                }
+            }
+            
+            
+            
+            
+            .img{
+                height: 360px;
+                width: 472px;
+                background: #FFC7F3;
+                border-radius: 10px;
             }
         }
     }

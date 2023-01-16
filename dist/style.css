@@ -48,6 +48,15 @@
 #switch:checked ~ * .news-block-first h1, #switch:checked ~ * .news-block-first h2, #switch:checked ~ * .news-block-first h4, #switch:checked ~ * .news-block-first p, #switch:checked ~ * .news-block-second h1, #switch:checked ~ * .news-block-second h2, #switch:checked ~ * .news-block-second h4, #switch:checked ~ * .news-block-second p, #switch:checked ~ * .news-block-third h1, #switch:checked ~ * .news-block-third h2, #switch:checked ~ * .news-block-third h4, #switch:checked ~ * .news-block-third p {
   color: black;
 }
+#switch:checked ~ * .horizontal-blocks .text {
+  background-color: white;
+}
+#switch:checked ~ * .horizontal-blocks .text h1, #switch:checked ~ * .horizontal-blocks .text h2 {
+  color: black;
+}
+#switch:checked ~ * .horizontal-blocks .text h5 {
+  color: #302c2c;
+}
 
 .a1 {
   display: flex;
@@ -396,4 +405,100 @@
   font-size: 12px;
   font-feature-settings: "liga" off;
   color: white;
+}
+.main .horiz-blocks-and-banner {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  margin: 24px 0;
+}
+.main .a4 {
+  width: 460px;
+  height: 920px;
+  background: #93ff82;
+  border-radius: 10px;
+}
+.main .horizontal-blocks {
+  width: 64.7222222222%;
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 24px;
+}
+.main .horizontal-blocks .block {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.main .horizontal-blocks .block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.main .horizontal-blocks .block .text {
+  width: 49.356223176%;
+  padding: 16px;
+  max-width: 460px;
+  border-radius: 10px;
+  background-color: black;
+}
+.main .horizontal-blocks .block .text h1 {
+  height: 164px;
+  width: 392px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  font-feature-settings: "liga" off;
+  color: white;
+}
+.main .horizontal-blocks .block .text h2 {
+  height: 88px;
+  width: 392px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: -0.019em;
+  color: white;
+  margin: 43px 0 16px;
+}
+.main .horizontal-blocks .block .text .date {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .horizontal-blocks .block .text .date h5 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  font-feature-settings: "liga" off;
+  color: #e3e3e3;
+}
+.main .horizontal-blocks .block .text .date img {
+  margin: 0 5px 0 13px;
+  width: 12px;
+  height: 12px;
+}
+.main .horizontal-blocks .block .text .date h6 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  font-feature-settings: "liga" off;
+  color: white;
+}
+.main .horizontal-blocks .block .img {
+  height: 360px;
+  width: 472px;
+  background: #FFC7F3;
+  border-radius: 10px;
 }
