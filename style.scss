@@ -16,6 +16,51 @@
     flex-direction: column;    
 }
 
+#switch{
+    display: none;
+    &:checked ~ .wrapper{
+        background-color: var.$background-light;
+    }
+    &:checked ~* .steppe-tags{
+        .tag{
+            background-color: var.$white;
+            border-color: var.$grey-tags;
+            p{
+                color: var.$black;
+            }
+            &:hover{
+                background-color: var.$black;
+                p{
+                    color: var.$white; 
+                }
+            }
+        }
+        .switcher{ 
+            background-color: var.$black;
+            .circle{
+                transform: translate(0,0);
+            }
+        }
+    }
+    // &:checked ~* .circle{
+    //     transform: translate(0,0);
+    // }
+    // &:checked ~* .tag{
+    //     background-color: var.$white;
+    //     border-color: var.$grey-tags;
+    //     p{
+    //         color: var.$black;
+    //     }
+    //     &:hover{
+    //         background-color: var.$black;
+    //         p{
+    //             color: var.$white; 
+    //         }
+    //     }
+    // }
+}
+
+
 .a1{
     @include mixin.flex(center,center);
     background: var.$green;
@@ -104,6 +149,27 @@
                 p{
                     color: var.$black;
                 }
+            }
+        }
+
+        .switcher{
+            padding: 3px;
+            display: flex;
+            width: 84px;
+            height: 48px;
+            background-color: var.$black;
+            border: 1px solid var.$rose;
+            border-radius: 32px;
+            background:
+            url(../img/Vectormoon.png) 20% center no-repeat,
+            url(../img/Vectorsun.png) 80% center no-repeat;
+            .circle{
+                transform: translate(36px,0);
+                transition: 0.2s ease-in-out;
+                width: 40px;
+                height: 40px;
+                background: var.$white;
+                border-radius: 50%;
             }
         }
     }

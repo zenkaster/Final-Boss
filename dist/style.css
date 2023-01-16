@@ -16,6 +16,32 @@
   flex-direction: column;
 }
 
+#switch {
+  display: none;
+}
+#switch:checked ~ .wrapper {
+  background-color: #f7f7f7;
+}
+#switch:checked ~ * .steppe-tags .tag {
+  background-color: white;
+  border-color: gray;
+}
+#switch:checked ~ * .steppe-tags .tag p {
+  color: black;
+}
+#switch:checked ~ * .steppe-tags .tag:hover {
+  background-color: black;
+}
+#switch:checked ~ * .steppe-tags .tag:hover p {
+  color: white;
+}
+#switch:checked ~ * .steppe-tags .switcher {
+  background-color: black;
+}
+#switch:checked ~ * .steppe-tags .switcher .circle {
+  transform: translate(0, 0);
+}
+
 .a1 {
   display: flex;
   justify-content: center;
@@ -124,4 +150,22 @@
 }
 .main .steppe-tags .tag:hover p {
   color: black;
+}
+.main .steppe-tags .switcher {
+  padding: 3px;
+  display: flex;
+  width: 84px;
+  height: 48px;
+  background-color: black;
+  border: 1px solid #ffc7f3;
+  border-radius: 32px;
+  background: url(../img/Vectormoon.png) 20% center no-repeat, url(../img/Vectorsun.png) 80% center no-repeat;
+}
+.main .steppe-tags .switcher .circle {
+  transform: translate(36px, 0);
+  transition: 0.2s ease-in-out;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
 }
