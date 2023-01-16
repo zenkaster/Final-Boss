@@ -9,11 +9,11 @@
 }
 
 .wrapper{
-    width: 1440px;
+    width: var.$container-width;
     margin: auto;
     background-color: var.$background-dark;
     @include mixin.flex(unset,center);
-    flex-direction: column;
+    flex-direction: column;    
 }
 
 .a1{
@@ -74,3 +74,37 @@
     }
 }
 
+
+.main{
+    @include mixin.flex(unset,center);
+    flex-direction: column;
+    width: 100%;
+    .steppe-tags{
+        @include mixin.width(1440,1392);
+        @include mixin.flex(unset,unset);
+        gap:16px;
+        .tag{
+            @include mixin.width(1392,160);
+            background-color: var.$black;
+            border: 2px solid var.$white;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            padding: 12px 0;
+            gap: 8px;
+            p{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                color: var.$white;
+                text-align: center;
+            }
+            &:hover{
+                background-color: var.$white;
+                p{
+                    color: var.$black;
+                }
+            }
+        }
+    }
+}

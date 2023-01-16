@@ -85,3 +85,43 @@
   font-size: 18px;
   color: white;
 }
+
+.main {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+}
+.main .steppe-tags {
+  width: 96.6666666667%;
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.main .steppe-tags .tag {
+  width: 11.4942528736%;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  padding: 12px 0;
+  gap: 8px;
+}
+.main .steppe-tags .tag p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+.main .steppe-tags .tag:hover {
+  background-color: white;
+}
+.main .steppe-tags .tag:hover p {
+  color: black;
+}
