@@ -6,6 +6,7 @@
     overflow-x: hidden;
     margin: 0;
     padding:0;
+    transition: 0.3s ease-in-out;
 }
 
 .wrapper{
@@ -42,22 +43,14 @@
             }
         }
     }
-    // &:checked ~* .circle{
-    //     transform: translate(0,0);
-    // }
-    // &:checked ~* .tag{
-    //     background-color: var.$white;
-    //     border-color: var.$grey-tags;
-    //     p{
-    //         color: var.$black;
-    //     }
-    //     &:hover{
-    //         background-color: var.$black;
-    //         p{
-    //             color: var.$white; 
-    //         }
-    //     }
-    // }
+    &:checked ~* .news-block{
+        &-first,&-second,&-third{
+            background-color: var.$white;
+            h1,h2,h4,p{
+                color: var.$black;
+            }
+        }
+    }
 }
 
 
@@ -170,6 +163,139 @@
                 height: 40px;
                 background: var.$white;
                 border-radius: 50%;
+            }
+        }
+    }
+    .news-block{
+        @include mixin.flex(unset,unset);
+        width: 100%;
+        margin: 32px 16px;
+        flex-wrap: nowrap;
+        gap: 16px;
+        &-first{
+            @include mixin.flex(unset,unset);
+            flex-direction: column;
+            background: var.$black;
+            border-radius: 10px;
+            padding: 12px 12px 13px;
+            .image{
+                background: var.$rose;
+                border-radius: 10px;
+                width: 296px;
+                height: 182px;
+            }
+            h1{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 18px;
+                font-feature-settings: 'liga' off;
+                color: var.$white;
+                margin: 4px 0 12px;
+
+            }
+            .news{
+                @include mixin.flex(unset,unset);
+                flex-direction: column;
+                gap: 8px;
+            }
+            .new{
+                @include mixin.flex(unset,unset);
+                flex-wrap: nowrap;
+                gap: 12px;
+                .img{
+                    background: var.$light-grey;
+                    border-radius: 10px;
+                    width: 72px;
+                    height: 72px;
+                }
+                .txt{
+                    @include mixin.flex(unset,unset);
+                    max-width: 204px;
+                    h2{
+                        background: var.$green;
+                        border: 1px solid var.$black;
+                        border-radius: 6px;
+                        padding: 4px 8px;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        letter-spacing: -0.019em;
+                        color: var.$white;
+                    }
+                    p{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$white;
+                    }
+                }
+            }
+        }
+        &-second{
+            background: var.$black;
+            border-radius: 10px;
+            padding: 16px;
+            .image{
+                width: 704px;
+                height: 364px;
+                background: var.$blue;
+                border-radius: 10px;
+            }
+            h4{
+                width: 704px;
+                height: 84px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 36px;
+                font-feature-settings: 'liga' off;
+                color: var.$white;
+                overflow: hidden;
+            }
+        }
+        &-third{
+            @include mixin.flex(unset,unset);
+            flex-direction: column;
+            gap: 12px;
+            padding: 12px 16px;
+            background-color: var.$black;
+            border-radius: 10px;
+            h1{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                color: var.$white;
+            }
+            .line{
+                width: 284px;
+                border: 1px solid var.$light-grey;
+                
+            }
+            p{
+                height: 66px;
+                text-transform: capitalize;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                color: var.$white;
+                max-width: 288px;
+                overflow: hidden;
+                span{
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    text-transform: lowercase;
+                    font-feature-settings: 'liga' off;
+                    color: var.$body;
+                }
             }
         }
     }

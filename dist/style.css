@@ -3,6 +3,7 @@
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  transition: 0.3s ease-in-out;
 }
 
 .wrapper {
@@ -40,6 +41,12 @@
 }
 #switch:checked ~ * .steppe-tags .switcher .circle {
   transform: translate(0, 0);
+}
+#switch:checked ~ * .news-block-first, #switch:checked ~ * .news-block-second, #switch:checked ~ * .news-block-third {
+  background-color: white;
+}
+#switch:checked ~ * .news-block-first h1, #switch:checked ~ * .news-block-first h2, #switch:checked ~ * .news-block-first h4, #switch:checked ~ * .news-block-first p, #switch:checked ~ * .news-block-second h1, #switch:checked ~ * .news-block-second h2, #switch:checked ~ * .news-block-second h4, #switch:checked ~ * .news-block-second p, #switch:checked ~ * .news-block-third h1, #switch:checked ~ * .news-block-third h2, #switch:checked ~ * .news-block-third h4, #switch:checked ~ * .news-block-third p {
+  color: black;
 }
 
 .a1 {
@@ -168,4 +175,153 @@
   height: 40px;
   background: white;
   border-radius: 50%;
+}
+.main .news-block {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 32px 16px;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+.main .news-block-first {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background: black;
+  border-radius: 10px;
+  padding: 12px 12px 13px;
+}
+.main .news-block-first .image {
+  background: #ffc7f3;
+  border-radius: 10px;
+  width: 296px;
+  height: 182px;
+}
+.main .news-block-first h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  font-feature-settings: "liga" off;
+  color: white;
+  margin: 4px 0 12px;
+}
+.main .news-block-first .news {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
+}
+.main .news-block-first .new {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+.main .news-block-first .new .img {
+  background: #e3e3e3;
+  border-radius: 10px;
+  width: 72px;
+  height: 72px;
+}
+.main .news-block-first .new .txt {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  max-width: 204px;
+}
+.main .news-block-first .new .txt h2 {
+  background: #93ff82;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.019em;
+  color: white;
+}
+.main .news-block-first .new .txt p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  font-feature-settings: "liga" off;
+  color: white;
+}
+.main .news-block-second {
+  background: black;
+  border-radius: 10px;
+  padding: 16px;
+}
+.main .news-block-second .image {
+  width: 704px;
+  height: 364px;
+  background: #9c9cff;
+  border-radius: 10px;
+}
+.main .news-block-second h4 {
+  width: 704px;
+  height: 84px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  font-feature-settings: "liga" off;
+  color: white;
+  overflow: hidden;
+}
+.main .news-block-third {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: black;
+  border-radius: 10px;
+}
+.main .news-block-third h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+}
+.main .news-block-third .line {
+  width: 284px;
+  border: 1px solid #e3e3e3;
+}
+.main .news-block-third p {
+  height: 66px;
+  text-transform: capitalize;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  max-width: 288px;
+  overflow: hidden;
+}
+.main .news-block-third p span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: lowercase;
+  font-feature-settings: "liga" off;
+  color: #777777;
 }

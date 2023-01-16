@@ -1,0 +1,25 @@
+#switch {
+  display: none;
+}
+#switch:checked ~ .wrapper {
+  background-color: #f7f7f7;
+}
+#switch:checked ~ * .steppe-tags .tag {
+  background-color: white;
+  border-color: gray;
+}
+#switch:checked ~ * .steppe-tags .tag p {
+  color: black;
+}
+#switch:checked ~ * .steppe-tags .tag:hover {
+  background-color: black;
+}
+#switch:checked ~ * .steppe-tags .tag:hover p {
+  color: white;
+}
+#switch:checked ~ * .steppe-tags .switcher {
+  background-color: black;
+}
+#switch:checked ~ * .steppe-tags .switcher .circle {
+  transform: translate(0, 0);
+}
