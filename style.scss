@@ -62,6 +62,13 @@
             }
         }
     }
+    &:checked ~* .more{
+        background-color: var.$black;
+        color: var.$white;
+    }
+    &:checked ~* .end{
+        background-image: url(../img/LOGOTYPEfootertype2.png);
+    }
 }
 
 
@@ -123,7 +130,9 @@
     }
 }
 
-
+button{
+    cursor: pointer;
+}
 .main{
     @include mixin.flex(unset,center);
     flex-flow: column nowrap;
@@ -573,11 +582,268 @@
             width: 1146px;
             border-radius: 10px;
             overflow: initial;
-
             h2{
                 @include mixin.dxlarge();
                 color: var.$black;
             }            
         }
+    }
+    .more{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1408px;
+        height: 140px;
+        background: var.$white;
+        border-radius: 10px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        text-align: center;
+        letter-spacing: -0.019em;
+        color: var.$black;
+        cursor: pointer;
+    }
+}
+
+
+.footer{
+    @include mixin.flex(unset,center);
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 0 16px;
+    .steppe-banner{
+        width: 100%;
+        background: var.$rose;
+        border-radius: 10px;
+        @include mixin.flex(unset,center);
+        flex-direction: column;
+        gap: 32px;
+        padding: 48px 0;
+        margin-top: 26px;
+        h1{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 72px;
+            text-align: center;
+            color: var.$black;
+            width: 1190px;
+        }
+    }
+    .banner-subs{
+        @include mixin.flex(unset,unset);
+        background-color: var.$black;
+        padding: 24px;
+        border-radius: 10px;
+        flex-wrap: nowrap;
+        gap: 24px;
+        input{
+            background: var.$background-dark;
+            border-radius: 10px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            padding: 52px 0 52px 32px;
+            letter-spacing: -0.019em;
+            color: var.$grey;
+            width: 816px;
+            height: 140px;
+        }
+        button{
+            background: var.$red;
+            border-radius: 10px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 100%;
+            text-align: center;
+            letter-spacing: -0.019em;
+            color: var.$white;
+            padding: 52px 120.5px;
+            text-transform: uppercase;
+            max-width: 520px;
+        }
+    }
+    .steppe-block{
+        width: 100%;
+        margin: 16px 0;
+        @include mixin.flex(unset,unset);
+        flex-wrap: nowrap;
+        gap: 16px;
+        .bl1{
+            max-height: 360px;
+            @include mixin.flex(unset,unset);
+            @include mixin.width(1408,460);
+            flex-direction: column;
+            flex-wrap: nowrap;
+            padding: 24px;
+            background-color: var.$black;
+            border-radius: 10px;
+            gap: 125px;
+            img{
+                width: 247px;
+                height: 56px;
+            }
+            h1{
+                @include mixin.dlarge();
+                color: var.$white;
+            }
+        }
+        .bl2{
+            background: #000000;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            height: 360px;
+            width: 932px; 
+            padding: 16px;           
+            h1{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 36px;
+                font-feature-settings: 'liga' off;
+                color: var.$white;
+            }
+            h2{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 36px;
+                font-feature-settings: 'liga' off;
+                color: var.$white;
+            }
+            button{
+                background: var.$yellow;
+                border-radius: 10px;
+                padding: 13px 129px 15px 130px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 18px;
+                text-align: center;
+                font-feature-settings: 'liga' off;
+                color: var.$black;
+            }
+            div{
+                height: 50%;
+                width: 50%;
+                &:nth-child(1){
+                    @include mixin.flex(start,start);
+                }
+                &:nth-child(2){
+                    @include mixin.flex(end,start);
+                }
+                &:nth-child(3){
+                    @include mixin.flex(start,end);
+                }
+                &:nth-child(4){
+                    @include mixin.flex(end,end);
+                }
+            }
+        }
+    }
+    .ideas-block{
+        width: 100%;
+        display: flex;
+        gap: 16px;
+        height: 360px;
+        .idea{
+            background: #000000;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            @include mixin.width(1408,932);
+            @include mixin.flex(unset,unset);
+            padding: 16px;
+            .bb{
+                width: 50%;
+                flex-wrap: nowrap;
+            }
+            .bl1{
+                @include mixin.flex(start,start);
+                h1{
+                    @include mixin.dlarge();
+                    color: var.$white;
+                }
+            }
+            .bl2{
+                @include mixin.flex(end,end);
+                button{
+                    background: #FFFFFF;
+                    border-radius: 10px;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 18px;
+                    text-align: center;
+                    font-feature-settings: 'liga' off;
+                    color: var.$black;
+                    padding: 13px 61px 15px;
+                }
+            }
+        }
+        .sogl{
+            @include mixin.width(1408,148);
+            background: #000000;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            a{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 28px;
+                letter-spacing: -0.019em;
+                color: #FFFFFF;
+                transform: rotate(-90deg) translate(0,-50px);
+                overflow: initial;
+                text-decoration: none;
+            }
+        }
+        .social{
+            background: #FFFFFF;
+            border-radius: 10px;
+            position: relative;
+            height: 360px;
+            width: 296px;            
+            img{
+                position: absolute;
+                &:nth-child(1){
+                    left: 45px;
+                    top: 24px;
+                }
+                &:nth-child(2){
+                    right: 42px;
+                    top: 59px;
+                }
+                &:nth-child(3){
+                    left: 65px;
+                    top: 139px;
+                }
+                &:nth-child(4){
+                    right: 64px;
+                    bottom: 124px;
+                }
+                &:nth-child(5){
+                    left: 92px;
+                    bottom: 25px;
+                }
+
+            }
+        }
+    }
+    .end{
+        margin-top: 60px;
+        background-image: url(../img/LOGOTYPEfootertype.png);
+        background-repeat: no-repeat;
+        height: 250px;
+        width: 100%;
     }
 }

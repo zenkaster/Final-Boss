@@ -57,6 +57,13 @@
 #switch:checked ~ * .horizontal-blocks .text h5 {
   color: #302c2c;
 }
+#switch:checked ~ * .more {
+  background-color: black;
+  color: white;
+}
+#switch:checked ~ * .end {
+  background-image: url(../img/LOGOTYPEfootertype2.png);
+}
 
 .a1 {
   display: flex;
@@ -126,6 +133,10 @@
   font-weight: 400;
   font-size: 18px;
   color: white;
+}
+
+button {
+  cursor: pointer;
 }
 
 .main {
@@ -652,4 +663,304 @@
   font-size: 42px;
   font-feature-settings: "liga" off;
   color: black;
+}
+.main .more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1408px;
+  height: 140px;
+  background: white;
+  border-radius: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: -0.019em;
+  color: black;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-flow: column nowrap;
+  width: 100%;
+  padding: 0 16px;
+}
+.footer .steppe-banner {
+  width: 100%;
+  background: #ffc7f3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 32px;
+  padding: 48px 0;
+  margin-top: 26px;
+}
+.footer .steppe-banner h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  text-align: center;
+  color: black;
+  width: 1190px;
+}
+.footer .banner-subs {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  background-color: black;
+  padding: 24px;
+  border-radius: 10px;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+.footer .banner-subs input {
+  background: #272727;
+  border-radius: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  padding: 52px 0 52px 32px;
+  letter-spacing: -0.019em;
+  color: #bebebe;
+  width: 816px;
+  height: 140px;
+}
+.footer .banner-subs button {
+  background: #ea2e34;
+  border-radius: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.019em;
+  color: white;
+  padding: 52px 120.5px;
+  text-transform: uppercase;
+  max-width: 520px;
+}
+.footer .steppe-block {
+  width: 100%;
+  margin: 16px 0;
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+.footer .steppe-block .bl1 {
+  max-height: 360px;
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  width: 32.6704545455%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 24px;
+  background-color: black;
+  border-radius: 10px;
+  gap: 125px;
+}
+.footer .steppe-block .bl1 img {
+  width: 247px;
+  height: 56px;
+}
+.footer .steppe-block .bl1 h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  font-feature-settings: "liga" off;
+  color: white;
+}
+.footer .steppe-block .bl2 {
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 360px;
+  width: 932px;
+  padding: 16px;
+}
+.footer .steppe-block .bl2 h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  font-feature-settings: "liga" off;
+  color: white;
+}
+.footer .steppe-block .bl2 h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  font-feature-settings: "liga" off;
+  color: white;
+}
+.footer .steppe-block .bl2 button {
+  background: #ffcb45;
+  border-radius: 10px;
+  padding: 13px 129px 15px 130px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  font-feature-settings: "liga" off;
+  color: black;
+}
+.footer .steppe-block .bl2 div {
+  height: 50%;
+  width: 50%;
+}
+.footer .steppe-block .bl2 div:nth-child(1) {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.footer .steppe-block .bl2 div:nth-child(2) {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.footer .steppe-block .bl2 div:nth-child(3) {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  flex-wrap: wrap;
+}
+.footer .steppe-block .bl2 div:nth-child(4) {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-wrap: wrap;
+}
+.footer .ideas-block {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  height: 360px;
+}
+.footer .ideas-block .idea {
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 66.1931818182%;
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+.footer .ideas-block .idea .bb {
+  width: 50%;
+  flex-wrap: nowrap;
+}
+.footer .ideas-block .idea .bl1 {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.footer .ideas-block .idea .bl1 h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  font-feature-settings: "liga" off;
+  color: white;
+}
+.footer .ideas-block .idea .bl2 {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-wrap: wrap;
+}
+.footer .ideas-block .idea .bl2 button {
+  background: #FFFFFF;
+  border-radius: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  font-feature-settings: "liga" off;
+  color: black;
+  padding: 13px 61px 15px;
+}
+.footer .ideas-block .sogl {
+  width: 10.5113636364%;
+  background: #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.footer .ideas-block .sogl a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: -0.019em;
+  color: #FFFFFF;
+  transform: rotate(-90deg) translate(0, -50px);
+  overflow: initial;
+  text-decoration: none;
+}
+.footer .ideas-block .social {
+  background: #FFFFFF;
+  border-radius: 10px;
+  position: relative;
+  height: 360px;
+  width: 296px;
+}
+.footer .ideas-block .social img {
+  position: absolute;
+}
+.footer .ideas-block .social img:nth-child(1) {
+  left: 45px;
+  top: 24px;
+}
+.footer .ideas-block .social img:nth-child(2) {
+  right: 42px;
+  top: 59px;
+}
+.footer .ideas-block .social img:nth-child(3) {
+  left: 65px;
+  top: 139px;
+}
+.footer .ideas-block .social img:nth-child(4) {
+  right: 64px;
+  bottom: 124px;
+}
+.footer .ideas-block .social img:nth-child(5) {
+  left: 92px;
+  bottom: 25px;
+}
+.footer .end {
+  margin-top: 60px;
+  background-image: url(../img/LOGOTYPEfootertype.png);
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 100%;
 }
