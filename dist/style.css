@@ -133,7 +133,7 @@
   justify-content: unset;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-flow: column nowrap;
   width: 100%;
 }
 .main .steppe-tags {
@@ -188,7 +188,7 @@
 }
 .main .news-block {
   display: flex;
-  justify-content: unset;
+  justify-content: center;
   align-items: unset;
   flex-wrap: wrap;
   width: 100%;
@@ -335,7 +335,7 @@
 }
 .main .vertical-blocks {
   display: flex;
-  justify-content: unset;
+  justify-content: center;
   align-items: unset;
   flex-wrap: wrap;
   gap: 14px;
@@ -408,7 +408,7 @@
 }
 .main .horiz-blocks-and-banner {
   display: flex;
-  justify-content: unset;
+  justify-content: center;
   align-items: unset;
   flex-wrap: wrap;
   gap: 16px;
@@ -501,4 +501,105 @@
   width: 472px;
   background: #FFC7F3;
   border-radius: 10px;
+}
+.main .a5 {
+  width: 1408px;
+  height: 363px;
+  background: #93ff82;
+  margin: 24px 0;
+}
+.main .tickets-block {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+.main .tickets-block .big-tick {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  width: 97.7777777778%;
+}
+.main .tickets-block .big-tick:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.main .tickets-block .big-tick .text {
+  padding: 24px 16px 24px;
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  width: 32.6704545455%;
+  background-color: #302c2c;
+  border-radius: 10px;
+  flex-wrap: nowrap;
+}
+.main .tickets-block .big-tick .text .block {
+  max-width: 280px;
+}
+.main .tickets-block .big-tick .text .block h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  font-feature-settings: "liga" off;
+  color: white;
+}
+.main .tickets-block .big-tick .text .block p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  font-feature-settings: "liga" off;
+  color: white;
+  margin-top: 48px;
+}
+.main .tickets-block .big-tick .text .caption {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: wrap;
+  transform: rotate(90deg) translate(170px, 0);
+  transform-origin: top right;
+  flex-wrap: nowrap;
+  width: 155px;
+  z-index: 99;
+}
+.main .tickets-block .big-tick .text .caption h5 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  font-feature-settings: "liga" off;
+  color: #e3e3e3;
+  white-space: nowrap;
+  overflow-x: initial;
+}
+.main .tickets-block .big-tick .text .caption img {
+  margin: 0 5px 0 13px;
+  width: 12px;
+  height: 12px;
+  white-space: nowrap;
+  overflow-x: initial;
+}
+.main .tickets-block .big-tick .text .caption h6 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  font-feature-settings: "liga" off;
+  color: white;
+  white-space: nowrap;
+  overflow-x: initial;
+  z-index: 99;
+}
+.main .tickets-block .big-tick .img {
+  background: #ffcb45;
+  border-radius: 10px;
+  width: 948px;
+  height: 560px;
 }

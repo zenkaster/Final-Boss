@@ -126,7 +126,7 @@
 
 .main{
     @include mixin.flex(unset,center);
-    flex-direction: column;
+    flex-flow: column nowrap;
     width: 100%;
     .steppe-tags{
         @include mixin.width(1440,1392);
@@ -179,7 +179,7 @@
         }
     }
     .news-block{
-        @include mixin.flex(unset,unset);
+        @include mixin.flex(center,unset);
         width: 100%;
         margin: 32px 16px;
         flex-wrap: nowrap;
@@ -309,7 +309,7 @@
         }
     }
     .vertical-blocks{
-        @include mixin.flex(unset,unset);
+        @include mixin.flex(center,unset);
         gap: 14px;
         width: 100%;
         .block{
@@ -375,7 +375,7 @@
         }
     }
     .horiz-blocks-and-banner{
-        @include mixin.flex(unset,unset);
+        @include mixin.flex(center,unset);
         gap: 16px;
         width: 100%;
         margin: 24px 0;
@@ -455,6 +455,87 @@
                 width: 472px;
                 background: #FFC7F3;
                 border-radius: 10px;
+            }
+        }
+    }
+    .a5{
+        width: 1408px;
+        height: 363px;
+        background: var.$green;
+        margin: 24px 0;
+    }
+    .tickets-block{
+        @include mixin.flex(unset,center);
+        flex-direction: column;
+        width: 100%;
+        gap: 24px;
+        .big-tick{
+            @include mixin.flex(unset,unset);
+            @include mixin.width(1440,1408);
+            &:nth-child(even){
+                flex-direction: row-reverse;
+            }
+            .text{
+                padding: 24px 16px 24px;
+                @include mixin.flex(unset,unset);
+                @include mixin.width(1408,460);
+                background-color: var.$dark-grey;
+                border-radius: 10px;
+                flex-wrap: nowrap;
+                .block{
+                    max-width: 280px;
+                    h1{
+                        @include mixin.dxxlarge();
+                        color: var.$white;
+                    }
+                    p{
+                        @include mixin.blarge();
+                        color: var.$white;
+                        margin-top: 48px;
+                    }
+                }
+                .caption{
+                    @include mixin.flex(unset,unset);
+                    transform: rotate(90deg) translate(170px, 0);
+                    transform-origin: top right;
+                    flex-wrap: nowrap;
+                    width: 155px;
+                    z-index: 99;
+                    h5{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$light-grey;
+                        white-space: nowrap;
+                        overflow-x: initial;
+                    }
+                    img{
+                        margin: 0 5px 0 13px;
+                        width: 12px;
+                        height: 12px;
+                        white-space: nowrap;
+                        overflow-x: initial;
+                    }
+                    h6{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$white;
+                        white-space: nowrap;
+                        overflow-x: initial;
+                        z-index: 99;
+                    }
+                }
+            }
+            .img{
+                background: var.$yellow;
+                border-radius: 10px;
+                width: 948px;
+                height: 560px;
             }
         }
     }
