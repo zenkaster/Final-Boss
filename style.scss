@@ -501,6 +501,7 @@
                     flex-wrap: nowrap;
                     width: 155px;
                     z-index: 99;
+                    overflow: initial;
                     h5{
                         font-family: 'Inter';
                         font-style: normal;
@@ -509,7 +510,7 @@
                         font-feature-settings: 'liga' off;
                         color: var.$light-grey;
                         white-space: nowrap;
-                        overflow-x: initial;
+                        overflow: initial;
                     }
                     img{
                         margin: 0 5px 0 13px;
@@ -526,7 +527,7 @@
                         font-feature-settings: 'liga' off;
                         color: var.$white;
                         white-space: nowrap;
-                        overflow-x: initial;
+                        overflow: initial;
                         z-index: 99;
                     }
                 }
@@ -537,6 +538,46 @@
                 width: 948px;
                 height: 560px;
             }
+        }
+    }
+    .test{
+        @include mixin.flex(unset,center);
+        margin-top: 32px;
+        .img{
+            background: var.$green;
+            border-radius: 10px;
+            height: 140px;
+            width: 200px;            
+        }
+        .tag{
+            width: 60px;
+            height: 140px;
+            background: var.$red;
+            border-radius: 100px;
+            @include mixin.flex(unset,center);
+            h1{
+                transform: rotate(-90deg);
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                text-align: center;
+                letter-spacing: -0.019em;
+                color: var.$white;
+            }
+        }
+        .content{
+            padding: 24px 36px;
+            background-color: var.$light-grey;
+            height: 140px;
+            width: 1146px;
+            border-radius: 10px;
+            overflow: initial;
+
+            h2{
+                @include mixin.dxlarge();
+                color: var.$black;
+            }            
         }
     }
 }

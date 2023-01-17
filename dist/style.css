@@ -568,6 +568,7 @@
   flex-wrap: nowrap;
   width: 155px;
   z-index: 99;
+  overflow: initial;
 }
 .main .tickets-block .big-tick .text .caption h5 {
   font-family: "Inter";
@@ -577,7 +578,7 @@
   font-feature-settings: "liga" off;
   color: #e3e3e3;
   white-space: nowrap;
-  overflow-x: initial;
+  overflow: initial;
 }
 .main .tickets-block .big-tick .text .caption img {
   margin: 0 5px 0 13px;
@@ -594,7 +595,7 @@
   font-feature-settings: "liga" off;
   color: white;
   white-space: nowrap;
-  overflow-x: initial;
+  overflow: initial;
   z-index: 99;
 }
 .main .tickets-block .big-tick .img {
@@ -602,4 +603,53 @@
   border-radius: 10px;
   width: 948px;
   height: 560px;
+}
+.main .test {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.main .test .img {
+  background: #93ff82;
+  border-radius: 10px;
+  height: 140px;
+  width: 200px;
+}
+.main .test .tag {
+  width: 60px;
+  height: 140px;
+  background: #ea2e34;
+  border-radius: 100px;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .test .tag h1 {
+  transform: rotate(-90deg);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -0.019em;
+  color: white;
+}
+.main .test .content {
+  padding: 24px 36px;
+  background-color: #e3e3e3;
+  height: 140px;
+  width: 1146px;
+  border-radius: 10px;
+  overflow: initial;
+}
+.main .test .content h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  font-feature-settings: "liga" off;
+  color: black;
 }
