@@ -1,0 +1,133 @@
+@media only screen and (min-width: 1440px) {
+  .wrapper {
+    width: 1440px;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .wrapper {
+    width: 768px;
+  }
+
+  .a1 {
+    height: 172px;
+    padding: 45px 325px;
+  }
+
+  .header {
+    justify-content: space-between;
+    margin: 24px 0 8px;
+  }
+  .header .search {
+    width: 286px;
+    margin: 0;
+  }
+  .header .drops {
+    display: none;
+  }
+  .header .tablet {
+    display: block;
+  }
+  .header .switcheer {
+    display: flex;
+  }
+
+  .main {
+    padding: 16px;
+  }
+  .main .steppe-tags {
+    flex-wrap: nowrap;
+  }
+  .main .steppe-tags .tag {
+    width: 183px;
+  }
+  .main .steppe-tags .tag:nth-child(5) {
+    display: none;
+  }
+  .main .steppe-tags .tag:nth-child(6) {
+    display: none;
+  }
+  .main .steppe-tags .tag:nth-child(7) {
+    display: none;
+  }
+  .main .steppe-tags .switcher {
+    display: none;
+  }
+  .main .news-block {
+    flex-direction: column;
+  }
+  .main .news-block-first {
+    max-height: 328px;
+    padding: 24px;
+  }
+  .main .news-block-first-title {
+    flex-wrap: nowrap;
+  }
+  .main .news-block-first-title .image {
+    height: 228px;
+    width: 336px;
+  }
+  .main .news-block-first-title h1 {
+    margin: 0;
+    margin-top: 12px;
+    overflow: hidden;
+  }
+  .main .news-block-first .news {
+    gap: 32px;
+  }
+  .main .news-block-first .news .h2 {
+    color: black;
+  }
+  .main .news-block-second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: -1;
+  }
+  .main .news-block-third {
+    flex-direction: row;
+    padding: 24px;
+    gap: 12px;
+    justify-content: space-between;
+  }
+  .main .news-block-third .tablet {
+    display: block;
+  }
+  .main .news-block-third h1 {
+    width: 100%;
+  }
+  .main .news-block-third .line {
+    width: 100%;
+  }
+  .main .news-block-third .line:nth-of-type(1) {
+    display: none;
+  }
+  .main .news-block-third .line:nth-of-type(2) {
+    display: none;
+  }
+  .main .news-block-third .line:nth-of-type(3) {
+    display: none;
+  }
+  .main .news-block-third .line:nth-of-type(5) {
+    display: none;
+  }
+  .main .news-block-third p {
+    width: 191px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .wrapper {
+    width: 375px;
+  }
+
+  .a1 {
+    height: 84px;
+    padding: 1px 129.5px;
+  }
+
+  .header {
+    justify-content: center;
+  }
+  .header input, .header .drops {
+    display: none;
+  }
+}

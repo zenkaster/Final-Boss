@@ -1,0 +1,884 @@
+@use 'mixin.scss';
+@use 'var.scss';
+*{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: 0;
+    padding:0;
+    transition: 0.3s ease-in-out;
+}
+.wrapper{
+    margin: auto;
+    background-color: var.$background-dark;
+    @include mixin.flex(unset,center);
+    flex-direction: column;    
+}
+#switch{
+    display: none;
+    &:checked ~ .wrapper{
+        background-color: var.$background-light;
+    }
+    &:checked ~* .switcheer{
+        background-color: var.$black;
+            .circle{
+                transform: translate(0,0);
+            }
+    }
+    &:checked ~* .steppe-tags{
+        .tag{
+            background-color: var.$white;
+            border-color: var.$grey-tags;
+            p{
+                color: var.$black;
+            }
+            &:hover{
+                background-color: var.$black;
+                p{
+                    color: var.$white; 
+                }
+            }
+        }
+        .switcher{ 
+            background-color: var.$black;
+            .circle{
+                transform: translate(0,0);
+            }
+        }
+    }
+    &:checked ~* .news-block{
+        &-first,&-second,&-third{
+            background-color: var.$white;
+            h1,h2,h4,p{
+                color: var.$black;
+            }
+        }
+    }
+    &:checked ~* .horizontal-blocks{
+        .text{
+            background-color: var.$white;
+            h1,h2{
+                color: var.$black;
+            }
+            h5{
+                color: var.$dark-grey;
+            }
+        }
+    }
+    &:checked ~* .more{
+        background-color: var.$black;
+        color: var.$white;
+    }
+    &:checked ~* .end{
+        background-image: url(../img/LOGOTYPEfootertype2.png);
+    }
+}
+.a1{
+    @include mixin.flex(center,center);
+    background: var.$green;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    text-align: center;
+    color: #000000;
+    padding: 120.5px 662px;
+    width: 100%;
+    height: 323px;
+}
+.header{
+    margin: 32px 0 16px;
+    background: var.$black;
+    border-radius: 10px;
+    @include mixin.width(1440,1408);
+    @include mixin.flex(unset,center);
+    flex-wrap: nowrap;
+    padding: 12px 24px;
+    .search{
+        margin: 0 37px 0 271px;
+        background-color: var.$dark-grey;
+        background-image: url(../img/Vectorlupa.png);
+        background-repeat: no-repeat;
+        background-position: 95% center;
+        @include mixin.width(1408,580);
+        padding: 15px 56px 14px 16px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;            
+        font-feature-settings: 'liga' off;
+        color: var.$body;
+        border-radius: 10px;
+        &:focus{
+            outline: none;
+        }
+    }
+    .drops{
+        @include mixin.flex(center,center);
+        gap:64px;
+        .drop-down{
+            @include mixin.flex(center,center);
+            gap: 12px;
+            p{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                color: var.$white;
+            }
+        }
+    }
+    .tablet{
+        display: none;
+        a{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            color: var.$white;
+            text-decoration: none;
+        }
+    }
+    .switcheer{
+        padding: 3px;
+        display: none;
+        width: 84px;
+        height: 48px;
+        background-color: var.$black;
+        border: 1px solid var.$rose;
+        border-radius: 32px;
+        background:
+        url(../img/Vectormoon.png) 20% center no-repeat,
+        url(../img/Vectorsun.png) 80% center no-repeat;
+        .circle{
+            transform: translate(36px,0);
+            transition: 0.2s ease-in-out;
+            width: 40px;
+            height: 40px;
+            background: var.$white;
+            border-radius: 50%;
+        }
+    }
+}
+button{
+    cursor: pointer;
+}
+.main{
+    @include mixin.flex(unset,center);
+    flex-flow: column nowrap;
+    width: 100%;
+    .steppe-tags{
+        @include mixin.width(1440,1392);
+        @include mixin.flex(unset,unset);
+        gap:16px;
+        .tag{
+            @include mixin.width(1392,160);
+            background-color: var.$black;
+            border: 2px solid var.$white;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            padding: 12px 0;
+            gap: 8px;
+            p{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                color: var.$white;
+                text-align: center;
+            }
+            &:hover{
+                background-color: var.$white;
+                p{
+                    color: var.$black;
+                }
+            }
+        }
+
+        .switcher{
+            margin-left: 65px;
+            padding: 3px;
+            display: flex;
+            width: 84px;
+            height: 48px;
+            background-color: var.$black;
+            border: 1px solid var.$rose;
+            border-radius: 32px;
+            background:
+            url(../img/Vectormoon.png) 20% center no-repeat,
+            url(../img/Vectorsun.png) 80% center no-repeat;
+            .circle{
+                transform: translate(36px,0);
+                transition: 0.2s ease-in-out;
+                width: 40px;
+                height: 40px;
+                background: var.$white;
+                border-radius: 50%;
+            }
+        }
+    }
+    .news-block{
+        @include mixin.flex(center,unset);
+        width: 100%;
+        margin: 32px 16px;
+        flex-wrap: nowrap;
+        gap: 16px;
+        &-first{
+            @include mixin.flex(unset,unset);
+            flex-direction: column;
+            background: var.$black;
+            border-radius: 10px;
+            padding: 12px 12px 13px;
+            &-title{
+                @include mixin.flex(unset,unset);
+                flex-direction: column;
+                .image{
+                    background: var.$rose;
+                    border-radius: 10px;
+                    width: 296px;
+                    height: 182px;
+                }
+                h1{
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 18px;
+                    font-feature-settings: 'liga' off;
+                    color: var.$white;
+                    margin: 4px 0 12px;
+    
+                }
+            }
+            .news{
+                @include mixin.flex(unset,unset);
+                flex-direction: column;
+                gap: 8px;
+            }
+            .new{
+                @include mixin.flex(unset,unset);
+                flex-wrap: nowrap;
+                gap: 12px;
+                .img{
+                    background: var.$light-grey;
+                    border-radius: 10px;
+                    width: 72px;
+                    height: 72px;
+                }
+                .txt{
+                    @include mixin.flex(unset,unset);
+                    max-width: 204px;
+                    h2{
+                        background: var.$green;
+                        border: 1px solid var.$black;
+                        border-radius: 6px;
+                        padding: 4px 8px;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        letter-spacing: -0.019em;
+                        color: var.$white;
+                    }
+                    p{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$white;
+                    }
+                }
+            }
+        }
+        &-second{
+            background: var.$black;
+            border-radius: 10px;
+            padding: 16px;
+            .image{
+                width: 704px;
+                height: 364px;
+                background: var.$blue;
+                border-radius: 10px;
+            }
+            h4{
+                width: 704px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 36px;
+                font-feature-settings: 'liga' off;
+                color: var.$white;
+            }
+        }
+        &-third{
+            @include mixin.flex(unset,unset);
+            flex-direction: column;
+            gap: 12px;
+            padding: 12px 16px;
+            background-color: var.$black;
+            border-radius: 10px;
+            h1{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                color: var.$white;
+            }
+            .line{
+                width: 284px;
+                border: 1px solid var.$light-grey;
+            }
+            p{
+                height: 66px;
+                text-transform: capitalize;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                color: var.$white;
+                max-width: 288px;
+                overflow: hidden;
+                span{
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    text-transform: lowercase;
+                    font-feature-settings: 'liga' off;
+                    color: var.$body;
+                }
+            }
+            .tablet{
+                display: none;
+            }
+        }
+    }
+    .vertical-blocks{
+        @include mixin.flex(center,unset);
+        gap: 14px;
+        width: 100%;
+        .block{
+            .img{
+                height: 360px;
+                width: 460px;
+                border-radius: 10px;                
+                background: var.$red;
+                border-radius: 10px;
+            }
+            .text{
+                @include mixin.flex(unset,unset);
+                flex-direction: column;
+                background-color: var.$black;
+                padding: 16px;
+                border-radius: 10px;
+                h1{
+                    width: 376px;
+                    height: 164px;                
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 36px;
+                    font-feature-settings: 'liga' off;
+                    color: var.$white;
+                }
+                p{
+                    width: 376px;
+                    height: 88px;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    letter-spacing: -0.019em;
+                    color: var.$white;
+                    margin: 43px 0 16px;
+                }
+                .date{
+                    @include mixin.flex(unset,center);
+                    h5{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$light-grey;
+                    }
+                    img{
+                        margin: 0 5px 0 13px;
+                        width: 12px;
+                        height: 12px;
+                    }
+                    h6{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$white;
+                    }
+                }
+            }
+        }
+    }
+    .horiz-blocks-and-banner{
+        @include mixin.flex(center,unset);
+        gap: 16px;
+        width: 100%;
+        margin: 24px 0;
+    }
+    .a4{
+        width: 460px;
+        height: 920px;
+        background: var.$green;
+        border-radius: 10px;
+    }
+    .horizontal-blocks{
+        @include mixin.width(1440,932);
+        @include mixin.flex(unset,unset);
+        flex-direction: column;
+        gap: 24px;
+        .block{
+            &:nth-child(even){
+                flex-direction: row-reverse;
+            }
+            @include mixin.flex(unset,unset);
+            flex-wrap: nowrap;
+            gap: 0;            
+            .text{
+                @include mixin.width(932,460);            
+                padding: 16px;
+                max-width: 460px;
+                border-radius: 10px;
+                background-color: var.$black;
+                h1{
+                    height: 164px;
+                    width: 392px;                    
+                    @include mixin.dlarge();
+                    color: var.$white;
+                }
+                h2{
+                    height: 88px;
+                    width: 392px;                    
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    letter-spacing: -0.019em;
+                    color: var.$white;
+                    margin: 43px 0 16px;
+                }
+                .date{
+                    @include mixin.flex(unset,center);
+                    h5{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$light-grey;
+                    }
+                    img{
+                        margin: 0 5px 0 13px;
+                        width: 12px;
+                        height: 12px;
+                    }
+                    h6{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$white;
+                    }
+                }
+            }
+            
+            
+            
+            
+            .img{
+                height: 360px;
+                width: 472px;
+                background: #FFC7F3;
+                border-radius: 10px;
+            }
+        }
+    }
+    .a5{
+        width: 1408px;
+        height: 363px;
+        background: var.$green;
+        margin: 24px 0;
+    }
+    .tickets-block{
+        @include mixin.flex(unset,center);
+        flex-direction: column;
+        width: 100%;
+        gap: 24px;
+        .big-tick{
+            @include mixin.flex(unset,unset);
+            @include mixin.width(1440,1408);
+            &:nth-child(even){
+                flex-direction: row-reverse;
+            }
+            .text{
+                padding: 24px 16px 24px;
+                @include mixin.flex(unset,unset);
+                @include mixin.width(1408,460);
+                background-color: var.$dark-grey;
+                border-radius: 10px;
+                flex-wrap: nowrap;
+                .block{
+                    max-width: 280px;
+                    h1{
+                        @include mixin.dxxlarge();
+                        color: var.$white;
+                    }
+                    p{
+                        @include mixin.blarge();
+                        color: var.$white;
+                        margin-top: 48px;
+                    }
+                }
+                .caption{
+                    @include mixin.flex(unset,unset);
+                    transform: rotate(90deg) translate(170px, 0);
+                    transform-origin: top right;
+                    flex-wrap: nowrap;
+                    width: 155px;
+                    z-index: 99;
+                    overflow: initial;
+                    h5{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$light-grey;
+                        white-space: nowrap;
+                        overflow: initial;
+                    }
+                    img{
+                        margin: 0 5px 0 13px;
+                        width: 12px;
+                        height: 12px;
+                        white-space: nowrap;
+                        overflow-x: initial;
+                    }
+                    h6{
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        font-feature-settings: 'liga' off;
+                        color: var.$white;
+                        white-space: nowrap;
+                        overflow: initial;
+                        z-index: 99;
+                    }
+                }
+            }
+            .img{
+                background: var.$yellow;
+                border-radius: 10px;
+                width: 948px;
+                height: 560px;
+            }
+        }
+    }
+    .test{
+        @include mixin.flex(unset,center);
+        margin-top: 32px;
+        .img{
+            background: var.$green;
+            border-radius: 10px;
+            height: 140px;
+            width: 200px;            
+        }
+        .tag{
+            width: 60px;
+            height: 140px;
+            background: var.$red;
+            border-radius: 100px;
+            @include mixin.flex(unset,center);
+            h1{
+                transform: rotate(-90deg);
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                text-align: center;
+                letter-spacing: -0.019em;
+                color: var.$white;
+            }
+        }
+        .content{
+            padding: 24px 36px;
+            background-color: var.$light-grey;
+            height: 140px;
+            width: 1146px;
+            border-radius: 10px;
+            overflow: initial;
+            h2{
+                @include mixin.dxlarge();
+                color: var.$black;
+            }            
+        }
+    }
+    .more{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1408px;
+        height: 140px;
+        background: var.$white;
+        border-radius: 10px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        text-align: center;
+        letter-spacing: -0.019em;
+        color: var.$black;
+        cursor: pointer;
+    }
+}
+.footer{
+    @include mixin.flex(unset,center);
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 0 16px;
+    .steppe-banner{
+        width: 100%;
+        background: var.$rose;
+        border-radius: 10px;
+        @include mixin.flex(unset,center);
+        flex-direction: column;
+        gap: 32px;
+        padding: 48px 0;
+        margin-top: 26px;
+        h1{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 72px;
+            text-align: center;
+            color: var.$black;
+            width: 1190px;
+        }
+    }
+    .banner-subs{
+        @include mixin.flex(unset,unset);
+        background-color: var.$black;
+        padding: 24px;
+        border-radius: 10px;
+        flex-wrap: nowrap;
+        gap: 24px;
+        input{
+            background: var.$background-dark;
+            border-radius: 10px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            padding: 52px 0 52px 32px;
+            letter-spacing: -0.019em;
+            color: var.$grey;
+            width: 816px;
+            height: 140px;
+        }
+        button{
+            background: var.$red;
+            border-radius: 10px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 100%;
+            text-align: center;
+            letter-spacing: -0.019em;
+            color: var.$white;
+            padding: 52px 120.5px;
+            text-transform: uppercase;
+            max-width: 520px;
+        }
+    }
+    .steppe-block{
+        width: 100%;
+        margin: 16px 0;
+        @include mixin.flex(unset,unset);
+        flex-wrap: nowrap;
+        gap: 16px;
+        .bl1{
+            max-height: 360px;
+            @include mixin.flex(unset,unset);
+            @include mixin.width(1408,460);
+            flex-direction: column;
+            flex-wrap: nowrap;
+            padding: 24px;
+            background-color: var.$black;
+            border-radius: 10px;
+            gap: 125px;
+            img{
+                width: 247px;
+                height: 56px;
+            }
+            h1{
+                @include mixin.dlarge();
+                color: var.$white;
+            }
+        }
+        .bl2{
+            background: #000000;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            height: 360px;
+            width: 932px; 
+            padding: 16px;           
+            h1{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 36px;
+                font-feature-settings: 'liga' off;
+                color: var.$white;
+            }
+            h2{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 36px;
+                font-feature-settings: 'liga' off;
+                color: var.$white;
+            }
+            button{
+                background: var.$yellow;
+                border-radius: 10px;
+                padding: 13px 129px 15px 130px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 18px;
+                text-align: center;
+                font-feature-settings: 'liga' off;
+                color: var.$black;
+            }
+            div{
+                height: 50%;
+                width: 50%;
+                &:nth-child(1){
+                    @include mixin.flex(start,start);
+                }
+                &:nth-child(2){
+                    @include mixin.flex(end,start);
+                }
+                &:nth-child(3){
+                    @include mixin.flex(start,end);
+                }
+                &:nth-child(4){
+                    @include mixin.flex(end,end);
+                }
+            }
+        }
+    }
+    .ideas-block{
+        width: 100%;
+        display: flex;
+        gap: 16px;
+        height: 360px;
+        .idea{
+            background: #000000;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            @include mixin.width(1408,932);
+            @include mixin.flex(unset,unset);
+            padding: 16px;
+            .bb{
+                width: 50%;
+                flex-wrap: nowrap;
+            }
+            .bl1{
+                @include mixin.flex(start,start);
+                h1{
+                    @include mixin.dlarge();
+                    color: var.$white;
+                }
+            }
+            .bl2{
+                @include mixin.flex(end,end);
+                button{
+                    background: #FFFFFF;
+                    border-radius: 10px;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 18px;
+                    text-align: center;
+                    font-feature-settings: 'liga' off;
+                    color: var.$black;
+                    padding: 13px 61px 15px;
+                }
+            }
+        }
+        .sogl{
+            @include mixin.width(1408,148);
+            background: #000000;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            a{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 28px;
+                letter-spacing: -0.019em;
+                color: #FFFFFF;
+                transform: rotate(-90deg) translate(0,-50px);
+                overflow: initial;
+                text-decoration: none;
+            }
+        }
+        .social{
+            background: #FFFFFF;
+            border-radius: 10px;
+            position: relative;
+            height: 360px;
+            width: 296px;            
+            img{
+                position: absolute;
+                &:nth-child(1){
+                    left: 45px;
+                    top: 24px;
+                }
+                &:nth-child(2){
+                    right: 42px;
+                    top: 59px;
+                }
+                &:nth-child(3){
+                    left: 65px;
+                    top: 139px;
+                }
+                &:nth-child(4){
+                    right: 64px;
+                    bottom: 124px;
+                }
+                &:nth-child(5){
+                    left: 92px;
+                    bottom: 25px;
+                }
+
+            }
+        }
+    }
+    .end{
+        margin-top: 60px;
+        background-image: url(../img/LOGOTYPEfootertype.png);
+        background-repeat: no-repeat;
+        height: 250px;
+        width: 100%;
+    }
+}

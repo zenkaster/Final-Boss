@@ -1,0 +1,131 @@
+@use 'var.scss';
+@media only screen and (min-width:1440px) {
+    .wrapper{
+        width: 1440px;
+    }
+}
+@media only screen and (max-width:769px) {
+    .wrapper{
+        width: 768px;
+    }
+    .a1{
+        height: 172px;
+        padding: 45px 325px;
+    }
+    .header{
+        justify-content: space-between;
+        margin: 24px 0 8px;
+        .search{
+            width: 286px;
+            margin: 0;
+        }
+        .drops{
+            display: none;
+        }
+        .tablet{
+            display: block;
+        }
+        .switcheer{
+            display: flex;
+        }
+    }
+    .main{
+        padding: 16px;
+        .steppe-tags{
+            flex-wrap: nowrap;
+            .tag{
+                width: 183px;
+                &:nth-child(5){
+                    display: none;
+                }
+                &:nth-child(6){
+                    display: none;
+                }
+                &:nth-child(7){
+                    display: none;
+                }
+            }
+            .switcher{
+                display: none;
+            }
+        }
+        .news-block{
+            flex-direction: column;
+            &-first{
+                max-height: 328px;
+                padding: 24px;
+                &-title{
+                    flex-wrap: nowrap;
+                    .image{
+                        height: 228px;
+                        width: 336px;
+                    }
+                    h1{
+                        margin: 0;
+                        margin-top: 12px;
+                        overflow: hidden;
+                    }
+                }
+                .news{
+                    gap: 32px;
+                    .h2{
+                        color: var.$black;
+                    }
+                }
+            }
+            &-second{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                order: -1;
+            }
+            &-third{
+                flex-direction: row;
+                padding: 24px;
+                gap:12px;
+                justify-content: space-between;
+                .tablet{
+                    display: block;
+                }
+                h1{
+                    width: 100%;
+                }
+                .line{
+                    width: 100%;
+                    &:nth-of-type(1){
+                        display: none;
+                    }
+                    &:nth-of-type(2){
+                        display: none;
+                    }
+                    &:nth-of-type(3){
+                        display: none;
+                    }
+                    &:nth-of-type(5){
+                        display: none;
+                    }
+                }
+                p{
+                    width: 191px;
+                }
+            }
+        }
+        .
+    }
+}
+@media only screen and (max-width:376px) {
+    .wrapper{
+        width: 375px;
+    }
+    .a1{
+        height: 84px;
+        padding: 1px 129.5px;
+    }
+    .header{
+        justify-content: center;
+        input,.drops{
+            display: none;
+        }
+        
+    }
+}
