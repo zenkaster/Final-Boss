@@ -1,4 +1,5 @@
 @use 'var.scss';
+@use 'mixin.scss';
 @media only screen and (min-width:1440px) {
     .wrapper{
         width: 1440px;
@@ -11,6 +12,9 @@
     .a1{
         height: 172px;
         padding: 45px 325px;
+    }
+    .a4,.a5{
+        display: none;
     }
     .header{
         justify-content: space-between;
@@ -64,12 +68,16 @@
                         margin: 0;
                         margin-top: 12px;
                         overflow: hidden;
+                        font-size: 20px;
                     }
                 }
                 .news{
                     gap: 32px;
                     .h2{
                         color: var.$black;
+                    }
+                    p{
+                        font-size: 14px;
                     }
                 }
             }
@@ -78,6 +86,9 @@
                 flex-direction: column;
                 align-items: center;
                 order: -1;
+                h4{
+                    width: unset;
+                }
             }
             &-third{
                 flex-direction: row;
@@ -107,10 +118,233 @@
                 }
                 p{
                     width: 191px;
+                    font-size: 14px;
                 }
             }
         }
-        .
+        .vertical-blocks{
+            flex-wrap: nowrap;
+            .block{
+                padding: 12px;
+                width: 359px;
+                background-color: var.$black;
+                border-radius: 10px;
+                &:nth-of-type(3){
+                    display: none;
+                }
+                .img{
+                    height: 240px;
+                    width: 335px;
+                    margin-bottom: 12px;
+                }
+                .text{
+                    gap: 12px;
+                    padding: 0;
+                    p{
+                        display: none;                    
+                    }
+                    h1{
+                        order: 1;
+                        width: unset;
+                        height: unset;
+                        @include mixin.dxsmall();
+                    }    
+                }
+            }
+        }
+        .horiz-blocks-and-banner{
+            gap: 0;
+        }
+        .ban{
+            display: none;
+        }
+        .horizontal-blocks{
+            width: 100%;
+            flex-direction: row;
+            gap: 18px;
+            .block{
+                flex-direction: column;
+                width: 359px;
+                &:nth-child(even){
+                    flex-direction: column;
+                }
+                .img{
+                    width: 100%;
+                    height: 281px;
+                    order: -1;
+                }
+                .text{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 12px;
+                    gap: 12px;
+                    h1{
+                        width: 100%;
+                        order: 1;
+                        height: unset;
+                        @include mixin.dxsmall();
+                    }
+                    h2{
+                        display: none;
+                    }
+                    
+                }
+            }
+        }
+        .tickets-block{
+            flex-direction: row;
+            gap: 18px;
+            align-items: unset;
+            margin-bottom: 24px;
+            .big-tick{
+                width: unset;
+                flex-direction: column;
+                &:nth-child(even){
+                    flex-direction: column;
+                }
+                .text{
+                    flex-wrap: wrap;
+                    width: 359px;
+                    padding: 12px;
+                    .block{
+                        max-width: unset;
+                        h1{
+                            font-size: 36px;
+                        }
+                        p{
+                            font-weight: 400;
+                            margin-top: 8px;
+                        }
+                    }
+                    .caption{
+                        margin-top: 12px;
+                        width: unset;
+                        transform: unset;
+                    }
+                }
+                .img{
+                    width: 359px;
+                    height: 280px;
+                    order: -1;
+                }
+            }
+        }
+        .test{
+            margin: 0 0 8px;
+            .img{
+                height: 140px;
+                width: 140px;
+            }
+            .content{
+                width: 536px;
+                padding: 24px;
+                h2{
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+            }
+        }
+        .more{
+            display: none;
+        }
+        
+    }
+    .footer{
+        .steppe-banner{
+            padding: 32px 24px;
+            gap: 24px;
+            margin-top: 0;
+            img{
+                width: 211px;
+                height: 49px;
+            }
+            h1{
+                font-size: 48px;
+                width: unset;
+            }
+        }
+        .banner-subs{
+            flex-direction: column;
+            margin-top: 16px;
+            input{
+                height: 98px;
+                width: 688px;
+                padding: 18px 0;
+                text-align: center;
+                font-weight: 500;
+                &::placeholder{
+                    font-weight: 500;
+                }
+            }
+            button{
+                width: 688px;
+                height: 114px;
+                padding: 31.5px 179px;
+                font-size: 51.2535px;
+                max-width: unset;
+            }
+        }
+        .steppe-block{
+            flex-direction: column;
+            .bl1{
+                max-height: unset;
+                border-radius: 20.5014px;
+                width: unset;
+                gap: 472px;
+                background-color: var.$white;
+                .img{
+                    background-image: url(../img/LOGOTYPElogotabletfuter.png);
+                    height: 112px;
+                    width: 506px;                    
+                }
+                h1{
+                    font-size: 48px;
+                    color: var.$black;
+                }
+            }
+            .bl2{
+                height: unset;
+                width: unset;
+                flex-direction: column;
+                gap: 16px;
+                h1,h2{
+                    font-size: 48px;
+                }
+                button{
+                    background: var.$red;
+                    color: var.$white;
+                    width: 100%;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 36px;
+                    text-align: center;
+                    font-feature-settings: 'liga' off;
+                    padding: 29px;
+                }
+                div{
+                    height: unset;
+                    width: unset;
+                    &:nth-child(1){
+                        @include mixin.flex(unset,unset);
+                    }
+                    &:nth-child(2){
+                        @include mixin.flex(unset,unset);
+                        order: 1;
+                    }
+                    &:nth-child(3){
+                        @include mixin.flex(unset,unset);
+                    }
+                    &:nth-child(4){
+                        @include mixin.flex(unset,unset);
+                    }
+                }
+            }
+        }
+        .ideas-block{
+            flex-direction: column;
+        }
     }
 }
 @media only screen and (max-width:376px) {

@@ -772,15 +772,23 @@ button {
 .footer .banner-subs input {
   background: #272727;
   border-radius: 10px;
+  width: 816px;
+  height: 140px;
+  padding: 52px 0 52px 32px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  letter-spacing: -0.019em;
+  color: white;
+}
+.footer .banner-subs input::placeholder {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
-  padding: 52px 0 52px 32px;
   letter-spacing: -0.019em;
   color: #bebebe;
-  width: 816px;
-  height: 140px;
 }
 .footer .banner-subs button {
   background: #ea2e34;
@@ -821,9 +829,10 @@ button {
   border-radius: 10px;
   gap: 125px;
 }
-.footer .steppe-block .bl1 img {
+.footer .steppe-block .bl1 .img {
   width: 247px;
   height: 56px;
+  background-image: url(../img/LOGOTYPElogofuter.png);
 }
 .footer .steppe-block .bl1 h1 {
   font-family: "Inter";

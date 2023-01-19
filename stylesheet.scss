@@ -677,15 +677,23 @@ button{
         input{
             background: var.$background-dark;
             border-radius: 10px;
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 36px;
-            padding: 52px 0 52px 32px;
-            letter-spacing: -0.019em;
-            color: var.$grey;
             width: 816px;
             height: 140px;
+            padding: 52px 0 52px 32px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            letter-spacing: -0.019em;
+            color: var.$white;
+            &::placeholder{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 36px;
+                letter-spacing: -0.019em;
+                color: var.$grey;
+            }
         }
         button{
             background: var.$red;
@@ -719,9 +727,10 @@ button{
             background-color: var.$black;
             border-radius: 10px;
             gap: 125px;
-            img{
+            .img{
                 width: 247px;
                 height: 56px;
+                background-image: url(../img/LOGOTYPElogofuter.png);
             }
             h1{
                 @include mixin.dlarge();
