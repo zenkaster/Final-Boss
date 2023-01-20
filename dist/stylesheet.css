@@ -749,6 +749,13 @@ button {
   padding: 48px 0;
   margin-top: 26px;
 }
+.footer .steppe-banner .img {
+  width: 132px;
+  height: 29.64px;
+  background-image: url(../img/Groupbanlogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .footer .steppe-banner h1 {
   font-family: "Inter";
   font-style: normal;

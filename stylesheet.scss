@@ -657,6 +657,13 @@ button{
         gap: 32px;
         padding: 48px 0;
         margin-top: 26px;
+        .img{
+            width: 132px;
+            height: 29.64px;
+            background-image: url(../img/Groupbanlogo.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
         h1{
             font-family: 'Inter';
             font-style: normal;
