@@ -309,6 +309,30 @@ button{
                 font-feature-settings: 'liga' off;
                 color: var.$white;
             }
+            .date{
+                display: none;
+                h5{
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    font-feature-settings: 'liga' off;
+                    color: var.$light-grey;
+                }
+                img{
+                    margin: 0 5px 0 13px;
+                    width: 12px;
+                    height: 12px;
+                }
+                h6{
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 12px;
+                    font-feature-settings: 'liga' off;
+                    color: var.$white;
+                }
+            }
         }
         &-third{
             @include mixin.flex(unset,unset);
@@ -701,6 +725,9 @@ button{
                 letter-spacing: -0.019em;
                 color: var.$grey;
             }
+            &:focus{
+                outline: none;
+            }
         }
         button{
             background: var.$red;
@@ -738,10 +765,13 @@ button{
                 width: 247px;
                 height: 56px;
                 background-image: url(../img/LOGOTYPElogofuter.png);
+                background-size: contain;
+                background-repeat: no-repeat;
             }
             h1{
                 @include mixin.dlarge();
                 color: var.$white;
+                overflow: hidden;
             }
         }
         .bl2{

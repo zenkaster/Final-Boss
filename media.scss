@@ -39,7 +39,7 @@
         }
     }
     .main{
-        padding: 16px;
+        padding: 0 16px;
         .steppe-tags{
             flex-wrap: nowrap;
             .tag{
@@ -431,6 +431,11 @@
     .wrapper{
         width: 375px;
     }
+    #switch{
+        &:checked ~* .end{
+        background-image: url(../img/LOGOTYPEmobilelogofuterbl.png);
+        }
+    }
     .a1{
         height: 84px;
         padding: 1px 129.5px;
@@ -442,8 +447,249 @@
         }
     }
     .main{
+        padding: 0 8px;
         .steppe-tags{
             display: none;
+        }
+        .news-block{
+            &-first{
+                flex-wrap: nowrap;
+                max-height: unset;
+                padding: 12px;
+                gap: 12px;
+                &-title{
+                    .image{
+                        height: 182px;
+                        width: 335px;
+                    }
+                }
+                .news{
+                    gap: 8px;
+                }
+            }
+            &-second{
+                padding: 12px;
+                align-items: unset;
+                .date{
+                    @include mixin.flex(unset,center);
+                    margin: 12px 0;
+                }
+                .image{
+                    height: 220px;
+                    width: 335px;                    
+                }
+
+
+            }
+            &-third{
+                padding: 12px;
+                justify-content: unset;
+                .tablet,.mobile{
+                    display: none;
+                }
+            }
+        }
+        .vertical-blocks{
+            flex-wrap: wrap;
+            .block{
+                &:nth-child(3){
+                    display: block;
+                }
+            }
+        }
+        .test{
+            flex-wrap: nowrap;
+            align-items: unset;
+            .img{
+                width: 86px;
+                height: 86px;
+            }
+            .tag{
+                width: 24px;
+                height: 86px;
+                border-radius: 20px;
+                h1{
+                    font-weight: 400;
+                    font-size: 14px;
+                    transform: rotate(-90deg) translate(-2px, -5px);
+                    overflow: initial;
+                }
+            }
+            .content{
+                height: unset;
+                width: 249px;
+                padding: 12px;
+                h2{
+                    font-weight: 500;
+                    font-size: 16px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+        }
+        .ban{
+            display: flex;
+        }
+    }
+    .footer{
+        flex-flow: row wrap;
+        padding: 0 8px;
+        .steppe-banner{
+            gap: 12.7px;
+            padding: 16px 12px 12px;
+            .img{
+                height: 24.3px;
+                width: 103px;
+            }
+            h1{
+                font-weight: 700;
+                font-size: 25px;
+            }
+        }
+        .banner-subs{
+            width: 100%;
+            padding: 12px;
+            flex-flow: column nowrap;
+            gap: 16px;
+            input{
+                height: 48px;
+                width: 335px;
+                padding: 9px 0;
+                font-weight: 500;
+                font-size: 25px;
+                &::placeholder{
+                    font-weight: 500;
+                    font-size: 25px;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+            button{
+                height: 56px;
+                width: 335px;
+                padding: 15.5px 0;
+                font-weight: 600;
+                font-size: 25px;
+            }
+        }
+        .steppe-block{
+            .bl1{
+                gap: 197px;
+                padding: 12px;
+                .img{
+                    height: 55px;
+                    width: 247px;
+                }
+                h1{
+                    font-weight: 600;
+                    font-size: 25px;
+                }
+            }
+            .bl2{
+                padding: 12px;
+                gap: 16px;
+                button{
+                    gap: 15.5px 116px;
+                    font-weight: 600;
+                    font-size: 25px;
+                    text-transform: uppercase;
+                }
+                div{
+                    height: unset;
+                    width: unset;
+                    h1{
+                        font-weight: 800;
+                        font-size: 25px;
+                    }
+                    h2{
+                        font-weight: 600;
+                        font-size: 25px;
+                    }
+                    &:nth-child(1){
+                        @include mixin.flex(unset,unset);
+                    }
+                    &:nth-child(2){
+                        @include mixin.flex(unset,unset);
+                        order: 1;
+                    }
+                    &:nth-child(3){
+                        @include mixin.flex(unset,unset);
+                    }
+                    &:nth-child(4){
+                        @include mixin.flex(unset,unset);
+                    }
+                }
+            }
+        }
+        .ideas-block{
+            gap: 8px;
+            .idea{
+                width: 100%;
+                padding: 12px;
+                gap: 49px;
+                .bl1{
+                    h1{
+                        font-weight: 600;
+                        font-size: 25px;
+                    }
+                }
+                .bl2{
+                    button{
+                        padding: 15.5px 38.5px;
+                        font-weight: 600;
+                        font-size: 25px;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            .sogl{
+                width: 80px;
+                height: 311px;
+                a{
+                    font-weight: 800;
+                    font-size: 18px;
+                    transform: rotate(-90deg) translate(0,-100px);
+                }
+            }
+            .social{
+                width: 271px;
+                height: 311px;
+                img{
+                    &:nth-child(1){
+                        left: 45px;
+                        top: 24px;
+                        width: 45px;
+                    }
+                    &:nth-child(2){
+                        right: 33px;
+                        top: 59px;
+                        width: 49.82px;
+                    }
+                    &:nth-child(3){
+                        left: 49px;
+                        top: 139px;
+                        width: 50px;
+                    }
+                    &:nth-child(4){
+                        right: 54px;
+                        bottom: 75px;
+                        width: 50px;
+                    }
+                    &:nth-child(5){
+                        left: 91.74px;
+                        bottom: 29px;
+                        width: 49.82px;
+                    }
+                }
+            }
+        }
+        .end{
+            margin-top: 8px;
+            background-image: url(../img/LOGOTYPEmobilelogofuter.png);
+            height: 81px;
         }
     }
 }

@@ -343,6 +343,30 @@ button {
   font-feature-settings: "liga" off;
   color: white;
 }
+.main .news-block-second .date {
+  display: none;
+}
+.main .news-block-second .date h5 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  font-feature-settings: "liga" off;
+  color: #e3e3e3;
+}
+.main .news-block-second .date img {
+  margin: 0 5px 0 13px;
+  width: 12px;
+  height: 12px;
+}
+.main .news-block-second .date h6 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  font-feature-settings: "liga" off;
+  color: white;
+}
 .main .news-block-third {
   display: flex;
   justify-content: unset;
@@ -797,6 +821,9 @@ button {
   letter-spacing: -0.019em;
   color: #bebebe;
 }
+.footer .banner-subs input:focus {
+  outline: none;
+}
 .footer .banner-subs button {
   background: #ea2e34;
   border-radius: 10px;
@@ -840,6 +867,8 @@ button {
   width: 247px;
   height: 56px;
   background-image: url(../img/LOGOTYPElogofuter.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .footer .steppe-block .bl1 h1 {
   font-family: "Inter";
@@ -848,6 +877,7 @@ button {
   font-size: 36px;
   font-feature-settings: "liga" off;
   color: white;
+  overflow: hidden;
 }
 .footer .steppe-block .bl2 {
   background: #000000;
@@ -1068,7 +1098,7 @@ button {
   }
 
   .main {
-    padding: 16px;
+    padding: 0 16px;
   }
   .main .steppe-tags {
     flex-wrap: nowrap;
@@ -1470,6 +1500,10 @@ button {
     width: 375px;
   }
 
+  #switch:checked ~ * .end {
+    background-image: url(../img/LOGOTYPEmobilelogofuterbl.png);
+  }
+
   .a1 {
     height: 84px;
     padding: 1px 129.5px;
@@ -1482,7 +1516,250 @@ button {
     display: none;
   }
 
+  .main {
+    padding: 0 8px;
+  }
   .main .steppe-tags {
     display: none;
+  }
+  .main .news-block-first {
+    flex-wrap: nowrap;
+    max-height: unset;
+    padding: 12px;
+    gap: 12px;
+  }
+  .main .news-block-first-title .image {
+    height: 182px;
+    width: 335px;
+  }
+  .main .news-block-first .news {
+    gap: 8px;
+  }
+  .main .news-block-second {
+    padding: 12px;
+    align-items: unset;
+  }
+  .main .news-block-second .date {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 12px 0;
+  }
+  .main .news-block-second .image {
+    height: 220px;
+    width: 335px;
+  }
+  .main .news-block-third {
+    padding: 12px;
+    justify-content: unset;
+  }
+  .main .news-block-third .tablet, .main .news-block-third .mobile {
+    display: none;
+  }
+  .main .vertical-blocks {
+    flex-wrap: wrap;
+  }
+  .main .vertical-blocks .block:nth-child(3) {
+    display: block;
+  }
+  .main .test {
+    flex-wrap: nowrap;
+    align-items: unset;
+  }
+  .main .test .img {
+    width: 86px;
+    height: 86px;
+  }
+  .main .test .tag {
+    width: 24px;
+    height: 86px;
+    border-radius: 20px;
+  }
+  .main .test .tag h1 {
+    font-weight: 400;
+    font-size: 14px;
+    transform: rotate(-90deg) translate(-2px, -5px);
+    overflow: initial;
+  }
+  .main .test .content {
+    height: unset;
+    width: 249px;
+    padding: 12px;
+  }
+  .main .test .content h2 {
+    font-weight: 500;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .main .ban {
+    display: flex;
+  }
+
+  .footer {
+    flex-flow: row wrap;
+    padding: 0 8px;
+  }
+  .footer .steppe-banner {
+    gap: 12.7px;
+    padding: 16px 12px 12px;
+  }
+  .footer .steppe-banner .img {
+    height: 24.3px;
+    width: 103px;
+  }
+  .footer .steppe-banner h1 {
+    font-weight: 700;
+    font-size: 25px;
+  }
+  .footer .banner-subs {
+    width: 100%;
+    padding: 12px;
+    flex-flow: column nowrap;
+    gap: 16px;
+  }
+  .footer .banner-subs input {
+    height: 48px;
+    width: 335px;
+    padding: 9px 0;
+    font-weight: 500;
+    font-size: 25px;
+  }
+  .footer .banner-subs input::placeholder {
+    font-weight: 500;
+    font-size: 25px;
+  }
+  .footer .banner-subs input:focus {
+    outline: none;
+  }
+  .footer .banner-subs button {
+    height: 56px;
+    width: 335px;
+    padding: 15.5px 0;
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .footer .steppe-block .bl1 {
+    gap: 197px;
+    padding: 12px;
+  }
+  .footer .steppe-block .bl1 .img {
+    height: 55px;
+    width: 247px;
+  }
+  .footer .steppe-block .bl1 h1 {
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .footer .steppe-block .bl2 {
+    padding: 12px;
+    gap: 16px;
+  }
+  .footer .steppe-block .bl2 button {
+    gap: 15.5px 116px;
+    font-weight: 600;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+  .footer .steppe-block .bl2 div {
+    height: unset;
+    width: unset;
+  }
+  .footer .steppe-block .bl2 div h1 {
+    font-weight: 800;
+    font-size: 25px;
+  }
+  .footer .steppe-block .bl2 div h2 {
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .footer .steppe-block .bl2 div:nth-child(1) {
+    display: flex;
+    justify-content: unset;
+    align-items: unset;
+    flex-wrap: wrap;
+  }
+  .footer .steppe-block .bl2 div:nth-child(2) {
+    display: flex;
+    justify-content: unset;
+    align-items: unset;
+    flex-wrap: wrap;
+    order: 1;
+  }
+  .footer .steppe-block .bl2 div:nth-child(3) {
+    display: flex;
+    justify-content: unset;
+    align-items: unset;
+    flex-wrap: wrap;
+  }
+  .footer .steppe-block .bl2 div:nth-child(4) {
+    display: flex;
+    justify-content: unset;
+    align-items: unset;
+    flex-wrap: wrap;
+  }
+  .footer .ideas-block {
+    gap: 8px;
+  }
+  .footer .ideas-block .idea {
+    width: 100%;
+    padding: 12px;
+    gap: 49px;
+  }
+  .footer .ideas-block .idea .bl1 h1 {
+    font-weight: 600;
+    font-size: 25px;
+  }
+  .footer .ideas-block .idea .bl2 button {
+    padding: 15.5px 38.5px;
+    font-weight: 600;
+    font-size: 25px;
+    white-space: nowrap;
+  }
+  .footer .ideas-block .sogl {
+    width: 80px;
+    height: 311px;
+  }
+  .footer .ideas-block .sogl a {
+    font-weight: 800;
+    font-size: 18px;
+    transform: rotate(-90deg) translate(0, -100px);
+  }
+  .footer .ideas-block .social {
+    width: 271px;
+    height: 311px;
+  }
+  .footer .ideas-block .social img:nth-child(1) {
+    left: 45px;
+    top: 24px;
+    width: 45px;
+  }
+  .footer .ideas-block .social img:nth-child(2) {
+    right: 33px;
+    top: 59px;
+    width: 49.82px;
+  }
+  .footer .ideas-block .social img:nth-child(3) {
+    left: 49px;
+    top: 139px;
+    width: 50px;
+  }
+  .footer .ideas-block .social img:nth-child(4) {
+    right: 54px;
+    bottom: 75px;
+    width: 50px;
+  }
+  .footer .ideas-block .social img:nth-child(5) {
+    left: 91.74px;
+    bottom: 29px;
+    width: 49.82px;
+  }
+  .footer .end {
+    margin-top: 8px;
+    background-image: url(../img/LOGOTYPEmobilelogofuter.png);
+    height: 81px;
   }
 }
